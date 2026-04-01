@@ -220,13 +220,7 @@ special instructions.
   </ul>
 {% endif %}
 </p>
-<p>We are dedicated to providing a positive and accessible learning environment for all. 
-  We do not require participants to provide documentation of disabilities or disclose any unnecessary personal information. 
-  However, we do want to help create an inclusive, accessible experience for all participants. 
-  We encourage you to share any information that would be helpful to make your Carpentries experience accessible.
-  To request accessibility support for this workshop, please fill out the 
-  <a href="https://carpentries.typeform.com/to/B2OSYaD0">accessibility support request form</a>.
-  If you have questions or need assistance with the accessibility support form please <a href="mailto:team@carpentries.org">email us</a>.
+<p>Please get in touch (using contact details below) if you require any accommodations or if there is anything we can do to make this workshop more accessible to you.
 </p>
 <p>
   <a href="https://glosario.carpentries.org/">Glosario</a> is a multilingual glossary 
@@ -240,13 +234,13 @@ special instructions.
 WORKSHOP RECORDINGS
 
 Modify or remove the block below if you plan to record the workshop.
-{% endcomment %}
 <p id="recordings">
   <strong>Workshop Recordings:</strong>
   Carpentries workshops are designed to be interactive rather than lecture-based, with lessons that build upon one another.
   To foster a positive online learning environment, we strongly recommend that participants join in real time.
   As a result, workshop recordings are not recommended and may not be available to learners.
 </p>
+{% endcomment %}
 {% comment %}
 CONTACT EMAIL ADDRESS
 
@@ -390,16 +384,7 @@ of code below the Schedule `<h2>` header below with
 
 <h2 id="schedule">Schedule</h2>
 
-{% if site.carpentry == "swc" %}
-{% include swc/schedule.html %}
-{% elsif site.carpentry == "dc" %}
-{% include dc/schedule.html %}
-{% elsif site.carpentry == "lc" %}
-{% include lc/schedule.html %}
-{% elsif site.carpentry == "incubator" %}
-This workshop is teaching a lesson in 
-<a href="https://carpentries-incubator.org/">The Carpentries Incubator</a>. Please check <a href="{{site.incubator_lesson_site}}">the lesson homepage</a> for a list of lesson sections and estimated timings.
-{% endif %}
+{% include custom-schedule.html %}
 
 {% comment %}
 Edit/replace the text above if you want to include a schedule table.
