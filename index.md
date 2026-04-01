@@ -222,6 +222,7 @@ special instructions.
 </p>
 <p>Please get in touch (using contact details below) if you require any accommodations or if there is anything we can do to make this workshop more accessible to you.
 </p>
+{% comment %}
 <p>
   <a href="https://glosario.carpentries.org/">Glosario</a> is a multilingual glossary 
   for computing and data science terms. The glossary helps 
@@ -229,6 +230,7 @@ special instructions.
   in their native language. Translating data science terms also provides a teaching tool for Carpentries Instructors to reduce barriers 
   for their learners.
 </p>
+{% endcomment %}
 
 {% comment %}
 WORKSHOP RECORDINGS
@@ -292,6 +294,13 @@ Edit the text to match who can attend the workshop. For instance:
     This workshop is open to ....
 </p>
 {% endcomment %}
+
+<hr/>
+<h2 id="registration">Registration</h2>
+
+<p>
+ The registration is open until April 26, 2026. Please use the <a href="https://docs.google.com/forms/d/e/1FAIpQLSdv02xt4e9mNqD39pYKoI9LG12f2XruAFRkkI5vHf_ekiN1Rw/viewform">registration form</a> provided.
+</p>
 
 <hr/>
 
@@ -413,6 +422,8 @@ please preview your site before committing, and make sure to run
 
 <h2 id="setup">Setup</h2>
 
+<h3>Install R and RStudio</h3>
+
 <p>
   To participate in a
   {% if site.carpentry == "swc" %}
@@ -426,6 +437,13 @@ please preview your site before committing, and make sure to run
   you will need access to software as described below.
   In addition, you will need an up-to-date web browser.
 </p>
+
+<p>
+    Please install a recent version of R and RStudio, as well as a few required R packages.
+    The <a href="https://datacarpentry.github.io/R-ecology-lesson/#preparations">setup instructions</a> can be found at the overview site of the <a href="https://datacarpentry.github.io/R-ecology-lesson/">Data Analysis and Visualization in R for Ecologists</a> lesson.
+    If you encounter any problems, you can get help during the troubleshooting session before the workshop.
+</p>
+
 <p>
   We maintain a list of common issues that occur during installation as a reference for instructors
   that may be useful on the
@@ -450,15 +468,3 @@ to include the relevant installation instructions.
 These are the installation instructions for the tools used
 during the workshop.
 {% endcomment %}
-
-{% if site.carpentry == "swc" %}
-{% include swc/setup.html %}
-{% elsif site.carpentry == "dc" %}
-{% include dc/setup.html %}
-{% elsif site.carpentry == "lc" %}
-{% include lc/setup.html %}
-{% elsif site.carpentry == "incubator" %}
-Please check the "Setup" page of
-<a href="{{site.incubator_lesson_site}}">the lesson homepage</a> for instructions to follow
-to obtain the software and data you will need to follow the lesson.
-{% endif %}
